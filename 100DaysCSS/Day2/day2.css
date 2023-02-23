@@ -1,0 +1,139 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body{
+    background-color: #333;
+}
+
+.center{
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.container{
+    background: #3faf82;
+    height: 400px;
+    width: 400px;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.burger-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 80px;
+    height: 60px;
+    cursor: pointer;
+}
+
+.burger-line{
+    position: absolute;
+    width: 100px;
+    height: 10px;
+    background:white;
+    border-radius: 4px;
+    box-shadow: 2px 2px 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+.burger-line:nth-child(1){
+    animation: line1-animation 1s forwards;
+}
+
+.burger-line:nth-child(2){
+    animation: line2-animation 1s forwards;
+}
+
+.burger-line:nth-child(3){
+    animation: line3-animation 1s forwards;
+}
+
+.burger-container.close .burger-line:nth-child(1){
+    animation: line1-close 1s forwards;
+}
+
+.burger-container.close .burger-line:nth-child(2){
+    animation: line2-close 1s forwards;
+}
+
+.burger-container.close .burger-line:nth-child(3){
+    animation: line3-close 1s forwards;
+}
+
+@keyframes line1-close{
+    0%{
+        transform: translateY(-20px);
+    }   
+    50%{
+        transform: translateY(0px);
+    }
+    100%{
+        transform: rotate(45deg);
+    }
+}
+
+
+@keyframes line2-close{
+    0%{
+        transform: scale(100%);
+    }
+    100%{
+        transform: scale(0%);
+    }
+}
+
+
+@keyframes line3-close{
+    0%{
+        transform: translateY(20px);
+    }
+    50%{
+        transform: translateY(0);
+    }
+    100%{
+        transform: rotate(135deg);
+    }
+}
+
+@keyframes line1-animation{
+    0%{
+        transform: rotate(45deg);
+    }
+    50%{
+        transform: translate(0px) rotate(0deg);
+    }
+    100%{
+        transform: translateY(-20px);
+    }   
+}
+
+
+@keyframes line2-animation{
+    0%{
+        transform: scale(0%);
+    }
+    100%{
+        transform: scale(100%);
+    }
+}
+
+
+@keyframes line3-animation{
+    0%{
+        transform: rotate(135deg);
+    }
+    50%{
+        transform: translateY(0px) rotate(0deg);
+    }
+    100%{
+        transform: translateY(20px);
+    }
+}
