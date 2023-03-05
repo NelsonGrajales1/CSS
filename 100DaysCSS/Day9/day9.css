@@ -1,0 +1,202 @@
+body {
+    background: #333;
+}
+
+.frame {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    height: 400px;
+    margin-top: -200px;
+    margin-left: -200px;
+    border-radius: 2px;
+    box-shadow: 1px 2px 10px 0px rgba(0, 0, 0, 0.3);
+    background: #1A2238;
+    overflow: hidden;
+}
+
+.luna {
+    width: 67px;
+    height: 67px;
+    background: #f6edbd;
+    border-radius: 50%;
+    box-shadow: 0px 0px 10px 0 #f6edbd;
+    position: absolute;
+    overflow: hidden;
+    left: 60px;
+    animation: luna 1s forwards ease-in-out;
+}
+
+@keyframes luna {
+    0% {
+        transform: translateY(200px);
+    }
+
+    100% {
+        transform: translateY(50px);
+    }
+}
+
+.hill-bg-1 {
+    position: absolute;
+    top: 201px;
+    left: -57px;
+    width: 337px;
+    height: 281px;
+    border-radius: 50%;
+    background: #26314f;
+}
+
+.hill-bg-2 {
+    position: absolute;
+    top: 197px;
+    left: 177px;
+    width: 337px;
+    height: 281px;
+    border-radius: 50%;
+    background: #26314f;
+}
+
+.hill-fg-1 {
+    position: absolute;
+    top: 248px;
+    left: 292px;
+    width: 337px;
+    height: 281px;
+    border-radius: 50%;
+    background: #303c5d;
+}
+
+.hill-fg-2 {
+    position: absolute;
+    top: 248px;
+    left: -137px;
+    width: 337px;
+    height: 281px;
+    border-radius: 50%;
+    background: #303c5d;
+}
+
+.hill-fg-3 {
+    position: absolute;
+    top: 221px;
+    left: 63px;
+    width: 337px;
+    height: 281px;
+    border-radius: 50%;
+    background: #303c5d;
+}
+
+.info {
+    position: absolute;
+    width: 100%;
+    height: 90px;
+    background: white;
+    bottom: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+.temperatura {
+    font-size: 50px;
+    font-weight: 100;
+}
+
+table,
+.datos {
+    font-weight: 100;
+}
+
+.temperaturas {
+    font-weight: 300;
+}
+
+.gotasbg::after {
+    position: absolute;
+    content: '';
+    display: block;
+    top: -5px;
+    left: 2px;
+    width: 4px;
+    height: 10px;
+    background: #7FC1F9;
+    border-radius: 50%;
+}
+
+.gotasbg::before {
+    position: absolute;
+    content: '';
+    display: block;
+    top: -2px;
+    left: 1px;
+    width: 6px;
+    height: 6px;
+    background: #7FC1F9;
+    border-radius: 3px;
+}
+
+.gotasmd::after {
+    position: absolute;
+    content: '';
+    display: block;
+    top: -4px;
+    left: 2px;
+    width: 2px;
+    height: 6px;
+    background: #7FC1F9;
+    border-radius: 3px;
+}
+
+.gotasmd::before {
+    position: absolute;
+    content: '';
+    display: block;
+    top: -2px;
+    left: 1px;
+    width: 4px;
+    height: 4px;
+    background: #7FC1F9;
+    border-radius: 3px;
+}
+
+.gotassm::after {
+    position: absolute;
+    content: '';
+    display: block;
+    top: -3px;
+    left: 1px;
+    width: 2px;
+    height: 4px;
+    background: #7FC1F9;
+    border-radius: 3px;
+}
+
+.gotassm::before {
+    position: absolute;
+    content: '';
+    display: block;
+    top: -2px;
+    left: 1px;
+    width: 2px;
+    height: 2px;
+    background: #7FC1F9;
+    border-radius: 3px;
+}
+
+@keyframes drop {
+    0% {
+        transform: translate3d(40px, -320px, 0) scaleX(1) scaleY(1) rotate(17deg);
+    }
+
+    85% {
+        transform: translate3d(0, 0, 0) scaleX(1) scaleY(1) rotate(17deg);
+    }
+
+    100% {
+        transform: translate3d(0, 0, 0) scaleX(3) scaleY(0) rotate(0deg);
+    }
+}
